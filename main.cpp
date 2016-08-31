@@ -13,6 +13,13 @@ int sum(int n);
 ** Return: Sum of 1 to n.
 */
 
+int product(int n);
+/*
+** Description: Calculates the product from 1 to the integer n.
+** Input: The integer that is the end bound for the product.
+** Return: Product from 1 to n.
+*/
+
 int main(){
   //Asks the user for integer input.
   int n;
@@ -24,6 +31,9 @@ int main(){
 
   //Prints the sum of 1 to n.
   cout << sum(n) << " is the sum from 1 to " << n  << endl;
+
+  //Prints the product of 1 to n.
+  cout << product(n) << " is the product from 1 to " << n << endl;
   
   return 0;
 }
@@ -37,5 +47,13 @@ int sum(int n){
     x+=i;
   }
 
+  return x;
+}
+
+int product(int n){
+  int x = 1;
+  for(int i = 1; i < n + 1; i++){
+    x*=i;
+  }
   return x;
 }
